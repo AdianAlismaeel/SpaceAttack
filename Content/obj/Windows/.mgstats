@@ -1,3 +1,15 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/adal04001/Desktop/SpaceShooter/Content/bg1.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/bg1.xnb","TextureProcessor","Texture2DContent",21833,3584085,0,4134329
-"C:/Users/adal04001/Desktop/SpaceShooter/Content/bg2.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/bg2.xnb","TextureProcessor","Texture2DContent",21525,3584085,0,2482146
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/_Tfont.spritefont","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/_Tfont.xnb","FontDescriptionProcessor","SpriteFontContent",2016,267298,0,527171
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Asteroid Brown.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Asteroid Brown.xnb","TextureProcessor","Texture2DContent",859,102485,0,0407113
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/back.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/back.xnb","TextureProcessor","Texture2DContent",1018006,12582997,0,7507026
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/beam.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/beam.xnb","TextureProcessor","Texture2DContent",1152,4185,0,0184103
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Button.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Button.xnb","TextureProcessor","Texture2DContent",280,14485,0,0302033
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_1.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Enemy_1.xnb","TextureProcessor","Texture2DContent",1426,28085,0,0531641
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_2.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Enemy_2.xnb","TextureProcessor","Texture2DContent",1398,28085,0,0178921
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Explosion.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Explosion.xnb","TextureProcessor","Texture2DContent",354,4417,0,0086818
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/Font.spritefont","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Font.xnb","FontDescriptionProcessor","SpriteFontContent",2017,37922,0,0373563
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/MMC5-track 1.ogg","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/MMC5-track 1.xnb","SongProcessor","SongContent",1036333,130,4,3371973
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/SpaceShip.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/SpaceShip.xnb","TextureProcessor","Texture2DContent",3101,25685,0,0266816
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/sprBg0.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/sprBg0.xnb","TextureProcessor","Texture2DContent",5726,1228885,0,0938214
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/sprBg1.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/sprBg1.xnb","TextureProcessor","Texture2DContent",5684,1228885,0,1036137
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/synth_laser_05.ogg","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/synth_laser_05.xnb","SongProcessor","SongContent",40371,132,3,3049426

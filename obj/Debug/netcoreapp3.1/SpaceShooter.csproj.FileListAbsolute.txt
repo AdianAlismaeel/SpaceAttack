@@ -50,5 +50,4 @@ C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\sprBg0.x
 C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\sprBg1.xnb
 C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\MMC5-track 1.wma
 C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\MMC5-track 1.xnb
-C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\bg1.xnb
-C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\bg2.xnb
+C:\Users\adal04001\Desktop\SpaceShooter\bin\Debug\netcoreapp3.1\Content\_Tfont.xnb

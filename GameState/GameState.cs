@@ -36,6 +36,7 @@ namespace SpaceShooter.States
     public override void LoadContent(){
 
       theme = _content.Load<Song>("MMC5-track 1");
+      MediaPlayer.IsRepeating = true;
       MediaPlayer.Play(theme);
 
       var playerTexture = _content.Load<Texture2D>("SpaceShip");
@@ -70,6 +71,7 @@ namespace SpaceShooter.States
           },
           Health = 10,
           Score = new Models.Score(){
+           
             Value = 0,
           },
         });
@@ -133,7 +135,7 @@ namespace SpaceShooter.States
           i--;
         }
       }
-      
+
       if (_players.All(c => c.IsDead)){
         _game.ChangeState(new Endmenu(_game, _content));
         MediaPlayer.Stop();

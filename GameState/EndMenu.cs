@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SpaceShooter.Controls;
 using SpaceShooter.Managers;
-using SpaceShooter.Sprites;
+using SpaceShooter.Models;
 
 namespace SpaceShooter.States
 {
@@ -17,6 +17,7 @@ namespace SpaceShooter.States
   public class Endmenu : State
   {
     private List<Component> _components;
+
 
     private SpriteFont _font;
 
@@ -56,6 +57,7 @@ namespace SpaceShooter.States
 
       foreach (var component in _components)
         component.Update(gameTime);
+        
     }
 
     public override void PostUpdate(GameTime gameTime){

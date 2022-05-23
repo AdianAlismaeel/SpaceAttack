@@ -4,11 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/_Tfont.spritefont</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Asteroid Brown.png</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/back.png</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/beam.png</File>
-    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/bg1.png</File>
-    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/bg2.png</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Button.png</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_1.png</File>
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_2.png</File>
@@ -21,7 +20,6 @@
     <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/synth_laser_05.ogg</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

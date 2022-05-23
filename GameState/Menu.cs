@@ -16,6 +16,8 @@ namespace SpaceShooter.States
   {
     private List<Component> _components;
 
+    private SpriteFont _Tfont;
+
     public MenuState(Game1 game, ContentManager content) : base(game, content){
     }
 
@@ -23,6 +25,8 @@ namespace SpaceShooter.States
 
       var buttonTexture = _content.Load<Texture2D>("Button");
       var buttonFont = _content.Load<SpriteFont>("Font");
+
+      _Tfont = _content.Load<SpriteFont>("_Tfont");
 
       _components = new List<Component>(){
 
@@ -61,6 +65,11 @@ namespace SpaceShooter.States
 
     }
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
+
+      spriteBatch.Begin();
+      spriteBatch.DrawString(_Tfont, "ATTACK ON SPACE!", new Vector2(330, 270), Color.DimGray);
+      spriteBatch.End();
+
       spriteBatch.Begin(SpriteSortMode.FrontToBack);
 
       foreach (var component in _components)
