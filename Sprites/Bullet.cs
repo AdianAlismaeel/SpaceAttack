@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Audio;
 namespace SpaceShooter.Sprites
 {
   /// <summary>
-  /// hanterar kulor som skjuts från skeppet dvs spelaren och fienderna
+  /// hanterar skott som skjuts från skeppet dvs spelaren och fienderna
   ///</summary>
   public class Bullet : Sprite, ICollidable
   {
@@ -37,7 +37,7 @@ namespace SpaceShooter.Sprites
 
     public void OnCollide(Sprite sprite){
 
-      // Bullets kolliderar ej med varandra
+      // skott kolliderar ej med varandra
       if (sprite is Bullet)
         return;
 

@@ -35,7 +35,7 @@ namespace SpaceShooter.Sprites
 
     public Input Input { get; set; } //inmatning
 
-    public Score Score { get; set; } //score
+    public Score Score { get; set; } //poäng
 
     public Player(Texture2D texture) : base(texture){ 
       Speed = 3f;
@@ -44,7 +44,7 @@ namespace SpaceShooter.Sprites
     #endregion 
 
     #region Methods
-    ///<summary> uppdaterar spelarens hastighet när olika tangenter trycks</summary>
+    ///<summary> uppdaterar spelarens hastighet när olika keys trycks</summary>
     public override void Update(GameTime gameTime){
       if (IsDead)
         return;

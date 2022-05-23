@@ -15,17 +15,17 @@ namespace SpaceShooter.Sprites
   ///</summary>
   public class Ship : Sprite, ICollidable
   {
-    public int Health { get; set; } //rymdraketens hälsa
+    public int Health { get; set; } //rymdskeppet hälsa
 
-    public Bullet Bullet { get; set; } //kulan som skjuts från rymdraketen
+    public Bullet Bullet { get; set; } //skottet som skjuts från rymdskeppet
 
-    public float Speed; //rymdraketen fart
+    public float Speed; //rymdskepp fart
 
 
-    public Ship(Texture2D texture) : base(texture){ //rymdraketens textur
+    public Ship(Texture2D texture) : base(texture){ //rymdskepp textur
     }
 
-    ///<summary>Metoden som gör att rymdraketen kan skjuta.</summary>
+    ///<summary>Metoden som gör att rymdskepp kan skjuta skott.</summary>
     protected void Shoot(float speed){
       var bullet = Bullet.Clone() as Bullet;
       bullet.Position = this.Position;

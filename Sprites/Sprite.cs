@@ -38,7 +38,7 @@ namespace SpaceShooter.Sprites
 
     protected Texture2D _texture; //hanterar textur för sprite
 
-    public List<Sprite> Secondary { get; set; } //andrahands kulor som skjuts av annat än spelaren dvs fiender
+    public List<Sprite> Secondary { get; set; } //andrahands skott som skjuts av annat än spelaren dvs fiender
 
     public Color Colour { get; set; } //Hanterar färg
 
@@ -110,7 +110,7 @@ namespace SpaceShooter.Sprites
       }
     }
 
-    /// <summary>Primära bullet dvs sprite som sköt kulan.</summary>
+    /// <summary>Primära bullet dvs sprite som sköt skottet.</summary>
     public Sprite Primary;
 
 
