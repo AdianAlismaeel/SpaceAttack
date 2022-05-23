@@ -100,7 +100,7 @@ namespace SpaceShooter.Sprites
       if (sprite is Bullet && ((Bullet)sprite).Primary is Enemy)
         Health--;
 
-      if (sprite is Enemy)
+      if (sprite is Enemy || sprite is Asteroid)
         Health -= 3;
 
       #endregion

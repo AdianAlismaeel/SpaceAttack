@@ -93,7 +93,8 @@ namespace SpaceShooter.States
 
       _enemyManager.Update(gameTime);
       if (_enemyManager.CanAdd && _sprites.Where(c => c is Enemy).Count() < _enemyManager.MaxEnemies){
-        _sprites.Add(_enemyManager.GetEnemy());
+        _sprites.Add(_enemyManager.GetEnemy()); 
+        _sprites.Add(_enemyManager.GetAsteroid());
       }
     }
 
@@ -102,7 +103,7 @@ namespace SpaceShooter.States
 
       foreach (var spriteA in collidableSprites){
         foreach (var spriteB in collidableSprites){
-          // Don't do anything if they're the same sprite!
+         
           if (spriteA == spriteB)
             continue;
 
@@ -114,7 +115,6 @@ namespace SpaceShooter.States
         }
       }
 
-      // Add the secondary sprites to the list of sprites (ie bullets)
       int spriteCount = _sprites.Count;
       for (int i = 0; i < spriteCount; i++)
       {
@@ -133,8 +133,7 @@ namespace SpaceShooter.States
           i--;
         }
       }
-
-      // If all the players are dead, we save the scores, and return to the highscore state
+      
       if (_players.All(c => c.IsDead)){
         _game.ChangeState(new Endmenu(_game, _content));
         MediaPlayer.Stop();

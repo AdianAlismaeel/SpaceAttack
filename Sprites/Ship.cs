@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 namespace SpaceShooter.Sprites
 {
   ///<summary>
-  ///ett skepp i spelet
+  ///rymdskepp i spelet
   ///</summary>
   public class Ship : Sprite, ICollidable
   {

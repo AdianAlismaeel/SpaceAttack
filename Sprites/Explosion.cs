@@ -13,13 +13,12 @@ namespace SpaceShooter.Sprites
   {
     private float _timer = 0f;
 
-    public Explosion(Dictionary<string, Animation> animations) : base(animations)
-    {
+    public Explosion(Dictionary<string, Animation> animations) : base(animations){
       
     }
 
-    public override void Update(GameTime gameTime)
-    {
+    public override void Update(GameTime gameTime){
+      
       _animationManager.Update(gameTime);
 
       _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;

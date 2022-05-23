@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Audio;
 namespace SpaceShooter.Sprites
 {
   /// <summary>
-  /// hanterar skott som skjuts från skeppet dvs spelaren och fienderna
+  /// hanterar kulor som skjuts från skeppet dvs spelaren och fienderna
   ///</summary>
   public class Bullet : Sprite, ICollidable
   {
@@ -42,16 +42,16 @@ namespace SpaceShooter.Sprites
         return;
 
       // Fiender kan inte skjuta varandra
-      if (sprite is Enemy && this.Primary is Enemy)
+      if ((sprite is Enemy && this.Primary is Enemy) || (sprite is Asteroid && this.Primary is Asteroid) )
         return;
 
 
-      if (sprite is Enemy && this.Primary is Player){
+      if ((sprite is Enemy && this.Primary is Player) || (sprite is Asteroid && this.Primary is Player)){
         IsRemoved = true;
         AddExplosion();
       }
 
-      if(sprite is Player && this.Primary is Enemy){
+      if((sprite is Player && this.Primary is Enemy) || (sprite is Player && this.Primary is Asteroid)){
         IsRemoved = true;
         AddExplosion();
       }

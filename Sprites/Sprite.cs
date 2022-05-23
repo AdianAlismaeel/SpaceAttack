@@ -30,7 +30,6 @@ namespace SpaceShooter.Sprites
 
     protected float _rotation { get; set; } //rotation för sprite
 
-    protected float _scale { get; set; } //skala
 
     #endregion
 
@@ -110,7 +109,7 @@ namespace SpaceShooter.Sprites
       }
     }
 
-    /// <summary>Primära bullet dvs sprite som sköt skottet.</summary>
+    /// <summary>Primära kulan  dvs sprite som sköt skottet.</summary>
     public Sprite Primary;
 
 
@@ -206,7 +205,7 @@ namespace SpaceShooter.Sprites
 
       return false;
     }
-    ///<summary>Den används för att klona objektet, vilket returnerar ytterligare en kopia av den datan</summary>
+    ///<summary> används för att klona objektet, vilket returnerar ytterligare en kopia av den datan</summary>
     public object Clone()
     {
       var sprite = this.MemberwiseClone() as Sprite;

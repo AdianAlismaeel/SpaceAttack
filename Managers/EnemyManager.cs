@@ -17,6 +17,8 @@ namespace SpaceShooter.Managers
 
     private List<Texture2D> _textures;
 
+    private List<Texture2D> _asteroid;
+
     public bool CanAdd { get; set; }
 
     public Bullet Bullet { get; set; }
@@ -32,8 +34,15 @@ namespace SpaceShooter.Managers
         content.Load<Texture2D>("Enemy_2"),
       };
 
-      MaxEnemies = 10;
-      SpawnTimer = 2f;
+      _asteroid = new List<Texture2D>(){
+
+        content.Load<Texture2D>("Asteroid Brown")
+
+      };
+
+
+      MaxEnemies = 5;
+      SpawnTimer = 3.5f;
     }
 
     public void Update(GameTime gameTime){
@@ -59,8 +68,24 @@ namespace SpaceShooter.Managers
         Layer = 0.2f,
         Position = new Vector2(Game1.ScreenWidth + texture.Width, Game1.Random.Next(0, Game1.ScreenHeight)),
         Speed = 2 + (float)Game1.Random.NextDouble(),
-        ShootingTimer = 1.5f + (float)Game1.Random.NextDouble(),
+        ShootingTimer = 1f + (float)Game1.Random.NextDouble(),
       };
     }
+
+     public Enemy GetAsteroid(){
+
+       var asteroid =  _asteroid[Game1.Random.Next(0, _asteroid.Count)];
+
+      return new Enemy(asteroid){
+        Bullet = Bullet,
+        Health = 7,
+        Layer = 0.2f,
+        Position = new Vector2(Game1.ScreenWidth + asteroid.Width, Game1.Random.Next(0, Game1.ScreenHeight)),
+        Speed = 2 + (float)Game1.Random.NextDouble(),
+        ShootingTimer = 2000f + (float)Game1.Random.NextDouble(),
+      };
+    }
+      
+    
   }
 }
