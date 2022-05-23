@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Asteroid Brown.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/back.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/beam.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/bg1.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/bg2.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Button.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_1.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Enemy_2.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Explosion.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/Font.spritefont</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/MMC5-track 1.ogg</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/SpaceShip.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/sprBg0.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/sprBg1.png</File>
+    <File>C:/Users/adal04001/Desktop/SpaceShooter/Content/synth_laser_05.ogg</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/bg1.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/bg1.xnb","TextureProcessor","Texture2DContent",21833,3584085,0,4134329
+"C:/Users/adal04001/Desktop/SpaceShooter/Content/bg2.png","C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/bg2.xnb","TextureProcessor","Texture2DContent",21525,3584085,0,2482146
