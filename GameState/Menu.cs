@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceShooter.Sprites;
 using SpaceShooter.Controls;
+using SpaceShooter.Managers;
 
 namespace SpaceShooter.States
 {
@@ -67,7 +68,7 @@ namespace SpaceShooter.States
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
 
       spriteBatch.Begin();
-      spriteBatch.DrawString(_Tfont, "ATTACK ON SPACE!", new Vector2(330, 270), Color.DimGray);
+      spriteBatch.DrawString(_Tfont, "SPACE ATTACK!", new Vector2(360, 270), Color.DimGray);
       spriteBatch.End();
 
       spriteBatch.Begin(SpriteSortMode.FrontToBack);
@@ -76,6 +77,8 @@ namespace SpaceShooter.States
         component.Draw(gameTime, spriteBatch);
 
       spriteBatch.End();
+
+
     }
   }
 }

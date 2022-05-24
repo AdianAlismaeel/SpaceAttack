@@ -41,8 +41,8 @@ namespace SpaceShooter.Managers
       };
 
 
-      MaxEnemies = 5;
-      SpawnTimer = 3.5f;
+      MaxEnemies = 4;
+      SpawnTimer = 3.85f;
     }
 
     public void Update(GameTime gameTime){
@@ -68,7 +68,7 @@ namespace SpaceShooter.Managers
         Layer = 0.2f,
         Position = new Vector2(Game1.ScreenWidth + texture.Width, Game1.Random.Next(0, Game1.ScreenHeight)),
         Speed = 2 + (float)Game1.Random.NextDouble(),
-        ShootingTimer = 1f + (float)Game1.Random.NextDouble(),
+        ShootingTimer = 1.75f + (float)Game1.Random.NextDouble(),
       };
     }
 

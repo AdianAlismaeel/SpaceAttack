@@ -17,7 +17,7 @@ namespace SpaceShooter.Sprites
     private float _timer;
 
     public Asteroid(Texture2D texture) : base(texture){
-      Speed = 3f;
+      Speed = 1.75f;
     }
 
     public override void Update(GameTime gameTime){

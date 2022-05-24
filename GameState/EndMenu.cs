@@ -18,7 +18,6 @@ namespace SpaceShooter.States
   {
     private List<Component> _components;
 
-
     private SpriteFont _font;
 
     public Endmenu(Game1 game, ContentManager content) : base(game, content){

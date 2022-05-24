@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SpaceShooter.Models
 {
-  ///<summary>score</summary>
+  ///<summary>Poäng</summary>
   public class Score
   {
     public int Value { get; set; }
 
-    public string PlayerName {get; set;}
   }
 }
