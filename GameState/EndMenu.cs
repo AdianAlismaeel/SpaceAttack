@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using SpaceShooter.Controls;
 using SpaceShooter.Managers;
 using SpaceShooter.Models;
+using SpaceShooter.Sprites;
 
 namespace SpaceShooter.States
 {
@@ -69,6 +70,7 @@ namespace SpaceShooter.States
         foreach (var component in _components)
         component.Draw(gameTime, spriteBatch);
       spriteBatch.End();
+
 
     }
   }
