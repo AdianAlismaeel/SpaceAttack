@@ -7385,11 +7385,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\adal04001\\Desktop\\SpaceShooter\\SpaceShooter.csproj",
+      "projectUniqueName": "C:\\Users\\adal04001\\Desktop\\SpaceShooter\\SpaceShooter.csproj",
       "projectName": "SpaceShooter",
-      "projectPath": "c:\\Users\\adal04001\\Desktop\\SpaceShooter\\SpaceShooter.csproj",
+      "projectPath": "C:\\Users\\adal04001\\Desktop\\SpaceShooter\\SpaceShooter.csproj",
       "packagesPath": "C:\\Users\\adal04001\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\adal04001\\Desktop\\SpaceShooter\\obj\\",
+      "outputPath": "C:\\Users\\adal04001\\Desktop\\SpaceShooter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\adal04001\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7435,6 +7435,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.25, 3.1.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -7443,7 +7449,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

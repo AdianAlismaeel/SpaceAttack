@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b0f9r57b0sU8Pof9qJuM86MxfbPbY79M0RRtfw1QrWi+F7kKIyxyGeB0z9ql4uIgtircs2MQH0/3uAQA3icJbQ==",
+  "dgSpecHash": "Fkr8kuxclmg/9rrbzvTxn0C9YAU65nhIK48cueQeFDjMYKCTxnOBBjYaZ8LyCUJZay7PIxeWorPGnj4wfc7j9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\adal04001\\Desktop\\SpaceShooter\\SpaceShooter.csproj",
   "expectedPackageFiles": [
@@ -124,7 +124,8 @@
     "C:\\Users\\adal04001\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\adal04001\\.nuget\\packages\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
     "C:\\Users\\adal04001\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\adal04001\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
+    "C:\\Users\\adal04001\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\adal04001\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
   ],
   "logs": []
 }
