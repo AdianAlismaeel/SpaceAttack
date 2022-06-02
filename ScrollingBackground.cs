@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace SpaceShooter
 {
-    public class Scrolling : Backgrounds
+    public class Scrolling : Backgrounds //": Backrgounds" eftersom jag behöver använda mig av vissa properties i backgrounds klassen
         {
             public Scrolling(Texture2D newTexture, Rectangle newRectangle){
                 

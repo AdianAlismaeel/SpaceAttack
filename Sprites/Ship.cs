@@ -28,7 +28,7 @@ namespace SpaceShooter.Sprites
     ///<summary>Metoden som gör att rymdskepp kan skjuta skott.</summary>
     protected void Shoot(float speed){
       var bullet = Bullet.Clone() as Bullet;
-      bullet.Position = this.Position;
+      bullet.Position = this.Position; 
       bullet.Colour = this.Colour;
       bullet.Layer = 0.1f;
       bullet.LifeSpan = 5f;
@@ -37,7 +37,7 @@ namespace SpaceShooter.Sprites
 
       Secondary.Add(bullet);
     }
-    ///<summary> hanterar kollision</summary>
+    ///<summary> hanterar kollision </summary>
     public virtual void OnCollide(Sprite sprite){
 
       throw new NotImplementedException();

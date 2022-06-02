@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>c:/Users/adal04001/Desktop/SpaceShooter/Content/Font.spritefont</SourceFile>
+  <SourceFile>C:/Users/adal04001/Desktop/SpaceShooter/Content/Font.spritefont</SourceFile>
   <SourceTime>2022-05-21T20:58:45.1591633+02:00</SourceTime>
-  <DestFile>c:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Content/Font.xnb</DestFile>
-  <DestTime>2022-05-27T00:29:07.1870971+02:00</DestTime>
+  <DestFile>C:/Users/adal04001/Desktop/SpaceShooter/Content/bin/Windows/Content/Font.xnb</DestFile>
+  <DestTime>2022-06-02T11:57:26.5528415+02:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

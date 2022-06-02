@@ -37,11 +37,11 @@ namespace SpaceShooter.Sprites
 
     public void OnCollide(Sprite sprite){
 
-      // skott kolliderar ej med varandra
+      // Gör så att skott ej kolliderar med varandra
       if (sprite is Bullet)
         return;
 
-      // Fiender kan inte skjuta varandra
+      // Gör så att fiender inte kan skjuta varandra
       if ((sprite is Enemy && this.Primary is Enemy) || (sprite is Asteroid && this.Primary is Asteroid) )
         return;
 
@@ -57,6 +57,7 @@ namespace SpaceShooter.Sprites
       }
     }
 
+    ///<summary> lägger till en explosion effekt när skottet nuddar fienden och vice versa </summary>
     private void AddExplosion(){
       if (Explosion == null)
         return;

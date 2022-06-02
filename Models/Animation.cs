@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SpaceShooter.Models
 {
   ///<summary>animation</summary>
-  public class Animation : ICloneable
+  public class Animation
   {
     public int CurrentFrame { get; set; }
 

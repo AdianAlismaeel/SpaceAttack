@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace SpaceShooter.States
 {
-  ///<summary>hanterar spelets olika states dvs meny, gamestate och endmenu</summary>
-  public abstract class State
+  ///<summary>hanterar spelets olika tillstånd dvs meny, gamestate och endmenu</summary>
+  public abstract class State //Syftet med att använda en abstrakt klass är att tillhandahålla en gemensam definition av en basklass som flera underklasser kan dela.
   {
     protected Game1 _game;
 

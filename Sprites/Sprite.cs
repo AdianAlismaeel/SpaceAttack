@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Audio;
 using SpaceShooter.Managers;
 using SpaceShooter.Models;
 
@@ -166,43 +165,50 @@ namespace SpaceShooter.Sprites
 
     ///<summary>Hanterar vad som ska ske om två sprites överlappar/rör varandra</summary>
     public bool Intersects(Sprite sprite){ 
-      
+
+      //Beräkna en matrix (matris?) som förvandlas från A:s lokalrum till världsrum och sedan in i B:s lokalrum
       var transformAToB = this.Transform * Matrix.Invert(sprite.Transform);
 
+      // När en punkt rör sig i A:s lokala rum, rör sig den i B:s lokala rum med en fast riktning och avstånd som är proportionell mot rörelsen i A.
+      // Den här algoritmen går igenom A, en pixel i taget längs A:s X- och Y-axlar.
+      // Beräkna de analoga stegen i B:
       var stepX = Vector2.TransformNormal(Vector2.UnitX, transformAToB);
       var stepY = Vector2.TransformNormal(Vector2.UnitY, transformAToB);
 
+      // Beräkna det övre vänstra hörnet av A i B:s lokalrum
+      // Denna variabel kommer att återanvändas för att hålla reda på början av varje rad
       var yPosInB = Vector2.Transform(Vector2.Zero, transformAToB);
 
       for (int yA = 0; yA < this.Rectangle.Height; yA++)
       {
+        // Börja i början av raden
         var posInB = yPosInB;
 
         for (int xA = 0; xA < this.Rectangle.Width; xA++)
         {
-
+          // Runda till närmaste pixel
           var xB = (int)Math.Round(posInB.X);
           var yB = (int)Math.Round(posInB.Y);
 
           if (0 <= xB && xB < sprite.Rectangle.Width &&
               0 <= yB && yB < sprite.Rectangle.Height)
           {
-            
+            // Få färgerna på de överlappande pixlarna
             var colourA = this.TextureData[xA + yA * this.Rectangle.Width];
             var colourB = sprite.TextureData[xB + yB * sprite.Rectangle.Width];
 
-            if (colourA.A != 0 && colourB.A != 0)
-            {
+            if (colourA.A != 0 && colourB.A != 0){
               return true;
             }
           }
 
+          // Flytta till nästa pixel i raden
           posInB += stepX;
         }
-
+        // Flytta till nästa rad
         yPosInB += stepY;
       }
-
+      // Ingen korsning hittades
       return false;
     }
     ///<summary> används för att klona objektet, vilket returnerar ytterligare en kopia av den datan</summary>

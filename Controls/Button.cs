@@ -14,47 +14,47 @@ namespace SpaceShooter.Controls
   {
     #region Fields
 
-    private MouseState _currentMouse; 
+    private MouseState _currentMouse; //nuvarande staten för musen
 
-    private SpriteFont _font;
+    private SpriteFont _font; //typsnitten
 
-    private bool _isHovering;
+    private bool _isHovering; // Om musen svävar 
 
-    private MouseState _previousMouse;
+    private MouseState _previousMouse; //föregående staten för musen
 
-    private Texture2D _texture;
+    private Texture2D _texture; //textil
 
     #endregion
 
     #region Properties
 
-    public EventHandler Click;
+    public EventHandler Click; //händelse när musen klickar
 
-    public float Layer { get; set; }
+    public float Layer { get; set; } //lager
 
-    public Vector2 Origin{
+    public Vector2 Origin{    //knappens origin psoition
       get{
         return new Vector2(_texture.Width / 2, _texture.Height / 2);
       }
     }
 
-    public Color PenColour { get; set; }
+    public Color PenColour { get; set; } //färg
 
-    public Vector2 Position { get; set; }
+    public Vector2 Position { get; set; } //position
 
-    public Rectangle Rectangle{
+    public Rectangle Rectangle{   //rektangeln
       get{
         return new Rectangle((int)Position.X - ((int)Origin.X), (int)Position.Y - (int)Origin.Y, _texture.Width, _texture.Height);
       }
     }
 
-    public string Text;
+    public string Text; //text
 
     #endregion
 
     #region Methods
-
-    public Button(Texture2D texture, SpriteFont font){
+    ///<summary> hanterar knappens sprite och typsnitt samt färg </summary>
+    public Button(Texture2D texture, SpriteFont font){ 
       _texture = texture;
 
       _font = font;
@@ -62,7 +62,8 @@ namespace SpaceShooter.Controls
       PenColour = Color.DarkSlateGray;
     }
 
-    public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
+     ///<summary> ritar ut knappen samt hanterar färg och vad som ska ske om musen svävar över knappen </summary>
+    public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){ 
 
       var colour = Color.White;
 
@@ -81,7 +82,8 @@ namespace SpaceShooter.Controls
 
     }
 
-    public override void Update(GameTime gameTime){
+    ///<summary> uppdaterar musens stat samt vad som sker när musen svävar över knappen</summary>
+    public override void Update(GameTime gameTime){ 
       _previousMouse = _currentMouse;
       _currentMouse = Mouse.GetState();
 

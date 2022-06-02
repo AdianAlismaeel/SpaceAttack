@@ -11,19 +11,19 @@ namespace SpaceShooter.Sprites
   public class Enemy : Ship
   {
     ///<summary> spelets fiender </summary>
-    private float _timer;
+    private float _timer; //tid
 
-    public float ShootingTimer = 1f;
+    public float ShootingTimer = 1f; //tid för skott
 
-    public Enemy(Texture2D texture) : base(texture){
-      Speed = 3f;
+    public Enemy(Texture2D texture) : base(texture){  
+      Speed = 3f; //fiendens hastighet
     }
 
     public override void Update(GameTime gameTime){
       _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-      if (_timer >= ShootingTimer){
-        Shoot(-5f);
+      if (_timer >= ShootingTimer){ //hanterar skotten som skjuts
+        Shoot(-5f); //skottets hastighet
         _timer = 0;
       }
 
@@ -33,20 +33,22 @@ namespace SpaceShooter.Sprites
         IsRemoved = true;
     }
 
+    ///<summary> Hanterar vad som sker vid kollision mellan spelaren och skeppfienderna </summary>
+
     public override void OnCollide(Sprite sprite){
 
       if (sprite is Player && !((Player)sprite).IsDead){
-        ((Player)sprite).Score.Value++;
+        ((Player)sprite).Score.Value++; //ökar poäng
 
-        IsRemoved = true;
+        IsRemoved = true; //sprite tas bort
       }
    
       if (sprite is Bullet && ((Bullet)sprite).Primary is Player){
         Health--;
 
-        if (Health <= 0){
+        if (Health <= 0){ //om hälsan är mindre än 0 hos fienden så tas den bort
           IsRemoved = true;
-          ((Player)sprite.Primary).Score.Value++;
+          ((Player)sprite.Primary).Score.Value++; //poäng ökar vid fiendens död
         }
       }
     }

@@ -14,28 +14,29 @@ using Microsoft.Xna.Framework.Media;
 namespace SpaceShooter.States
 {
   ///<summary>spelskärmen</summary>
-  public class GameState : State
+  public class GameState : State //": State " eftersom jag behöver använda mig av vissa properties i state klassen
   {
-    private EnemyManager _enemyManager;
+    private EnemyManager _enemyManager; //behandlar fiender
 
     private SpriteFont _font;
 
-    private List<Player> _players;
+    private List<Player> _players;  //behandlar spelaren
 
-    private List<Sprite> _sprites;
+    private List<Sprite> _sprites;  //behandlar sprites
 
-    public int PlayerCount;
+    public int PlayerCount; //antalet spelare
 
-    Song theme;
+    Song theme;   //theme låten
 
     public GameState(Game1 game, ContentManager content): base(game, content){
     }
 
     #region Methods
 
+    ///<summary> Laddar in all content för spelskärmen </summary>
     public override void LoadContent(){
 
-      theme = _content.Load<Song>("MMC5-track 1");
+      theme = _content.Load<Song>("MMC5-track 1"); //laddar in låten samt upprepar den till spelets slut, låten spelas endast i denna skärmen
       MediaPlayer.IsRepeating = true;
       MediaPlayer.Play(theme);
 
@@ -47,6 +48,7 @@ namespace SpaceShooter.States
       _sprites = new List<Sprite>(){  
       };
 
+      ///<summary> tar hand om explosion effekten </summary>
       var bulletPrefab = new Bullet(bulletTexture){
         Explosion = new Explosion(new Dictionary<string, Models.Animation>(){
               { "Explode", new Models.Animation(_content.Load<Texture2D>("Explosion"), 3) { FrameSpeed = 0.1f, } }
@@ -55,7 +57,7 @@ namespace SpaceShooter.States
           Layer = 0.5f,
         }
       };
-
+      ///<summary> tar ahnd om allt relaterat till spelaren dvs vad som sker nrä WASD tangenterna trycks och hälsan etc</summary>
       if (PlayerCount >= 1){
 
         _sprites.Add(new Player(playerTexture){
@@ -84,6 +86,7 @@ namespace SpaceShooter.States
       };
     }
 
+    ///<summary> Lägger till fiender i spelet, hänvisar till maximala antalet i enemymanager klassen</summary>
     public override void Update(GameTime gameTime){
 
 
@@ -100,12 +103,14 @@ namespace SpaceShooter.States
       }
     }
 
+    ///<summary> hanterar vad som sker vid kollision</summary>
     public override void PostUpdate(GameTime gameTime){
       var collidableSprites = _sprites.Where(c => c is ICollidable);
 
       foreach (var spriteA in collidableSprites){
         foreach (var spriteB in collidableSprites){
          
+         //ingenting händer om det är samma sprite som kolliderar
           if (spriteA == spriteB)
             continue;
 
@@ -117,6 +122,7 @@ namespace SpaceShooter.States
         }
       }
 
+      //lägger till sekundära spirte till listan över sprites (dvs kulorna)
       int spriteCount = _sprites.Count;
       for (int i = 0; i < spriteCount; i++)
       {
@@ -135,13 +141,14 @@ namespace SpaceShooter.States
           i--;
         }
       }
-
+      // Om alla spelare är döda så stoppas musiken och spelaren skickas till slutmenyn
       if (_players.All(c => c.IsDead)){
         _game.ChangeState(new Endmenu(_game, _content));
         MediaPlayer.Stop();
       }
     }
 
+    ///<summary> Ritar ut alla textures/sprites samt text som exempelvis health och score</summary>
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
 
       spriteBatch.Begin(SpriteSortMode.FrontToBack);

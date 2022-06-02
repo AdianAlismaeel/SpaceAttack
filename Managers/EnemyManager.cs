@@ -27,6 +27,7 @@ namespace SpaceShooter.Managers
 
     public float SpawnTimer { get; set; }
 
+    ///<summary> Laddar in fiende content filerna </summary>
     public EnemyManager(ContentManager content){
 
       _textures = new List<Texture2D>(){
@@ -41,8 +42,8 @@ namespace SpaceShooter.Managers
       };
 
 
-      MaxEnemies = 4;
-      SpawnTimer = 3.85f;
+      MaxEnemies = 4;   //maximala antalet fiender
+      SpawnTimer = 3.85f; 
     }
 
     public void Update(GameTime gameTime){
@@ -58,6 +59,7 @@ namespace SpaceShooter.Managers
       }
     }
 
+    ///<summary> Metod för fienden som ritar ut allt relaterat till skepp fienden, nedanstående mtod tar hand om asteroiden på samma vis</summary>
     public Enemy GetEnemy(){
 
       var texture = _textures[Game1.Random.Next(0, _textures.Count)];

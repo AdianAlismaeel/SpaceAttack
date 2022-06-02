@@ -11,14 +11,19 @@ using SpaceShooter.Models;
 
 namespace SpaceShooter.Sprites
 {
-    public class Asteroid : Ship
+    ///<summary>
+    /// Hanterar allt relaterat till asteroid fienden
+    ///</summary>
+    public class Asteroid : Ship // ": Ship" används så att jag kan ha tillgång till vissa porperties som t.ex speed som finns i Ship klassen. 
     {
    
     private float _timer;
 
     public Asteroid(Texture2D texture) : base(texture){
-      Speed = 1.75f;
+      Speed = 1.75f; //asteroidens hastighet
     }
+
+    ///<summary> Update metod som hanterar asteroidens position</summary>
 
     public override void Update(GameTime gameTime){
       _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -31,20 +36,22 @@ namespace SpaceShooter.Sprites
 
     }
 
+    ///<summary> Hanterar vad som sker vid kollision mellan spelaren och asteroiden </summary>
+
     public override void OnCollide(Sprite sprite){
 
       if (sprite is Player && !((Player)sprite).IsDead){
-        ((Player)sprite).Score.Value++;
+        ((Player)sprite).Score.Value++; //ökar poäng
 
-        IsRemoved = true;
+        IsRemoved = true; //sprite tas bort
       }
    
       if (sprite is Bullet && ((Bullet)sprite).Primary is Player){
-        Health--;
+        Health--; //minskar hälsan på fienden
 
-        if (Health <= 0){
+        if (Health <= 0){ //om hälsan är mindre än noll, tas spriten bort
           IsRemoved = true;
-          ((Player)sprite.Primary).Score.Value++;
+          ((Player)sprite.Primary).Score.Value++; //spelarens poäng ökar
         }
       }
     }

@@ -44,7 +44,7 @@ namespace SpaceShooter.Sprites
     #endregion 
 
     #region Methods
-    ///<summary> uppdaterar spelarens hastighet när olika keys trycks</summary>
+    ///<summary> uppdaterar spelarens hastighet och rotation när olika tangenter trycks</summary>
     public override void Update(GameTime gameTime){
       if (IsDead)
         return;
@@ -86,6 +86,7 @@ namespace SpaceShooter.Sprites
       Position = Vector2.Clamp(Position, new Vector2(80, 0), new Vector2(Game1.ScreenWidth / 4, Game1.ScreenHeight));
     }
 
+    ///<summary> Draw metod </summary>
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
       if (IsDead)
         return;
@@ -94,13 +95,13 @@ namespace SpaceShooter.Sprites
     }
 
     public override void OnCollide(Sprite sprite){
-      if (IsDead)
+      if (IsDead)   //hanterar vad som sker vid spelarens död
         return;
 
-      if (sprite is Bullet && ((Bullet)sprite).Primary is Enemy)
+      if (sprite is Bullet && ((Bullet)sprite).Primary is Enemy)  //om en fiendes skott rör spelaren minskar hälsan med 1
         Health--;
 
-      if (sprite is Enemy || sprite is Asteroid)
+      if (sprite is Enemy || sprite is Asteroid)  //om spelaren kolliderar med fienden minskar hälsan med 3
         Health -= 3;
 
       #endregion

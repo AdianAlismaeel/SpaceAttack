@@ -13,14 +13,16 @@ using SpaceShooter.Managers;
 namespace SpaceShooter.States
 {
   ///<summary> spelets meny </summary>
-  public class MenuState : State
+  public class MenuState : State //": State" eftersom jag behöver använda mig av properties från state klassen
   {
     private List<Component> _components;
 
-    private SpriteFont _Tfont;
+    private SpriteFont _Tfont;  //titel typsnitt
 
     public MenuState(Game1 game, ContentManager content) : base(game, content){
     }
+
+    ///<summary> Laddar in all content som behövs</summary>
 
     public override void LoadContent(){
 
@@ -29,6 +31,7 @@ namespace SpaceShooter.States
 
       _Tfont = _content.Load<SpriteFont>("_Tfont");
 
+      ///<summary> Ritar ut knapparna med hjälp av component klassens metoder </summary>
       _components = new List<Component>(){
 
         new Button(buttonTexture, buttonFont){
@@ -47,12 +50,13 @@ namespace SpaceShooter.States
       };
     }
 
+  ///<summary> Metod för startknappen som skickar spelaren till spelskärmen och startar spelet</summary>
     private void StartButton(object sender, EventArgs args){
       _game.ChangeState(new GameState(_game, _content){
         PlayerCount = 1,
       });
     }
-
+    ///<summary> Metod för quit knappen som avslutar spelet</summary>
     private void QuitButton(object sender, EventArgs args){
       _game.Exit();
     }
@@ -65,6 +69,8 @@ namespace SpaceShooter.States
     public override void PostUpdate(GameTime gameTime){
 
     }
+
+    ///<summary> Draw metoden som ritar ut alla behövda sprites/textures etc</summary>
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch){
 
       spriteBatch.Begin();

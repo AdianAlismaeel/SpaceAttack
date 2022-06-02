@@ -16,14 +16,14 @@ namespace SpaceShooter
 
     public static Random Random;
 
-    public static int ScreenWidth = 1280;
-    public static int ScreenHeight = 700;
+    public static int ScreenWidth = 1280;   //skärmens bredd
+    public static int ScreenHeight = 700;   //skrämens höjd
 
-    private State _currentState;
-    private State _nextState;
+    private State _currentState;      //nuvarande tillstånd
+    private State _nextState;         //nästa tillstånd
 
-    Scrolling scrolling1;
-    Scrolling scrolling2;
+    Scrolling scrolling1;             //första bilden för skrollande bakgrunden
+    Scrolling scrolling2;             //andra bilden för skrollande bakgrunden
 
     public Game1()
     {
@@ -57,18 +57,14 @@ namespace SpaceShooter
 
     }
 
-    /// <summary>
-    /// UnloadContent will be called once per game and is the place to unload
-    /// game-specific content.
-    /// </summary>
+
     protected override void UnloadContent()
     {
       // TODO: Unload any non ContentManager content here
     }
 
     /// <summary>
-    /// Allows the game to run logic such as updating the world,
-    /// checking for collisions, gathering input, and playing audio.
+    /// Tillåter spelet att köra logik som att uppdatera världen, checka efter kollisioner, samla in input och spela upp ljud.
     /// </summary>
     protected override void Update(GameTime gameTime)
     {
@@ -86,7 +82,7 @@ namespace SpaceShooter
 
       base.Update(gameTime);
 
-       //scrolling background
+       //skrollande bakgrunden
 
       if(scrolling1.rectangle.X + scrolling1.texture.Width <=0)
         scrolling1.rectangle.X = scrolling2.rectangle.X + scrolling2.texture.Width;
